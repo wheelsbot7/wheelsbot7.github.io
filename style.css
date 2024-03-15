@@ -329,6 +329,7 @@
   .aboutLink {
     font-size: 35px;
     font-family: 'Russo One', sans-serif;
+    display: inline-block;
   }
 
   .aboutLink:hover {
