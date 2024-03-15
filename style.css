@@ -1,0 +1,100 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+   body {
+    background-color: rgba(16, 36, 66, 0.911);
+    color: rgb(255, 252, 96);
+    font-family: Verdana;
+    text-align: center;
+  }
+
+  a:link {
+    color:aliceblue
+  }
+
+  a:visited {
+    color:aqua
+  }
+
+
+  @keyframes wiggle {
+    0%,100% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(-15deg);
+    }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    to {
+      transform:translateY(-25%);
+      animation-timing-function:cubic-bezier(.8,0,1,1)
+    }
+    50% {
+      transform:none;
+      animation-timing-function:cubic-bezier(0,0,.2,1)
+    }
+  }
+
+  .spin {
+    display: inline-block;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .wiggle {
+    display: inline-block;
+    animation-name: wiggle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .bounce {
+    display: inline-block;
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+    .container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .scrolling {
+    animation: marquee 2s linear infinite;
+    display: inline-block;
+    padding-right: 10px;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to { 
+      transform: translateX(-100%);
+    }
+  }
+
+  .hover {
+    font-size:medium;
+    transition:0.3s;
+    display:inline-flex;
+    word-wrap: break-word;
+  }
+  .hover:hover {
+    font-size: xx-large;
+    cursor: pointer;
+  }
