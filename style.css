@@ -67,26 +67,37 @@
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
   }
+
+    .marquee {
+      --gap: 1rem;
+      display: flex;
+      overflow: hidden;
+      gap: var(--gap);
+      position: relative;
+    }
   
-    .container {
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  
-  .scrolling {
-    animation: marquee 2s linear infinite;
-    display: inline-block;
-    padding-right: 10px;
-  }
-  
-  @keyframes marquee {
+    .marquee__content {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      min-width: 100%;
+      gap: var(--gap);
+      animation: scroll 10s linear infinite;
+      list-style: none;
+      justify-content: space-around;
+      padding: 0px;
+    }
+
+  @keyframes scroll {
     from {
       transform: translateX(0);
     }
-    to { 
-      transform: translateX(-100%);
+
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
-  }
+}
+    
 
   .hover {
     font-size:medium;
