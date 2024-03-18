@@ -82,7 +82,7 @@
       align-items: center;
       min-width: 100%;
       gap: var(--gap);
-      animation: scroll 10s linear infinite;
+      animation: scroll 30s linear infinite;
       list-style: none;
       justify-content: space-around;
       padding: 0px;
