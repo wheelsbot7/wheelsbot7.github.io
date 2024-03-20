@@ -346,3 +346,9 @@
   .aboutLink:hover {
     transform: scale(110%);
   }
+
+  .PixelArt {
+    image-rendering: pixelated;
+    scale: 3;
+    padding: 30px;
+  }
