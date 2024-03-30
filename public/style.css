@@ -68,25 +68,25 @@
     animation-iteration-count: infinite;
   }
 
-    .marquee {
-      --gap: 1rem;
-      display: flex;
-      overflow: hidden;
-      gap: var(--gap);
-      position: relative;
-    }
+  .marquee {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    gap: var(--gap);
+    position: relative;
+  }
   
-    .marquee__content {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      min-width: 100%;
-      gap: var(--gap);
-      animation: scroll 30s linear infinite;
-      list-style: none;
-      justify-content: space-around;
-      padding: 0px;
-    }
+  .marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scroll 30s linear infinite;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0px;
+  }
 
   @keyframes scroll {
     from {
@@ -351,4 +351,23 @@
     image-rendering: pixelated;
     scale: 3;
     padding: 30px;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px)}
+    10% { transform: translate(-1px, -2px)}
+    20% { transform: translate(-3px, 0px)}
+    30% { transform: translate(3px, 2px)}
+    40% { transform: translate(1px, -1px)}
+    50% { transform: translate(-1px, 2px)}
+    60% { transform: translate(-3px, 1px)}
+    70% { transform: translate(3px, 1px)}
+    80% { transform: translate(-1px, -1px)}
+    90% { transform: translate(1px, 2px)}
+    100% { transform: translate(1px, -2px)}
+  }
+
+  .shake {
+    display: inline-block;
+    animation: shake 0.5s linear infinite;
   }
