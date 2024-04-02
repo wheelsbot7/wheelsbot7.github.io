@@ -6,26 +6,14 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link href="style.css" rel="stylesheet" type="text/css" media="all" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script>
-      $(function(){
-        $('a').each(function(){
-            if ($(this).prop('href') == window.location.href) {
-                $(this).addClass('active');
-            }
-        });
-      });
-    </script>
   </head>
   <body>
-    <div id="nav-placeholder">
+    <div id="nav-placeholder"></div>
 
-    </div>
-    
     <script>
-    $(function(){
-      $("#nav-placeholder").load("nav.html");
-    });
+      $(function () {
+        $("#nav-placeholder").load("nav.html");
+      });
     </script>
 
     <div class="marquee">
