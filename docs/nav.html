@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 
 <head>
-    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    $(function () {
+      $("a").each(function () {
+        if ($(this).prop("href") == window.location.href) {
+          $(this).addClass("active");
+        }
+      });
+    });
+  </script>
 </head>
 <html>
-    <div id="navbar">
-        <ul>
-            <li><a href="/index.html">HOME</a></li>
-            <li><a href="/about.html">ABOUT</a></li>
-            <li><a href="/testing_ground.html">TESTING GROUND</a></li>
-        </ul>
-    </div>
+  <div id="navbar">
+    <ul>
+      <li><a href="/index.html">HOME</a></li>
+      <li><a href="/about.html">ABOUT</a></li>
+      <li><a href="/testing_ground.html">TESTING GROUND</a></li>
+    </ul>
+  </div>
 </html>
