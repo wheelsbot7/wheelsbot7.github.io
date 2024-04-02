@@ -376,8 +376,8 @@
 
   .PixelArt {
     image-rendering: pixelated;
-    scale: 3;
-    padding: 30px;
+    height: 100px;
+    padding: 3px;
   }
 
   @keyframes shake {
