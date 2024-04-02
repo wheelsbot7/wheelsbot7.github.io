@@ -10,11 +10,38 @@
   }
 
   a:link {
-    color:aliceblue
+    color:lightblue
   }
 
   a:visited {
     color:aqua
+  }
+
+  #navbar ul {
+    list-style: none;
+  }
+
+  #navbar li {
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+
+  #navbar a:hover {
+    background-color: black;
+    transform:rotate(5deg);
+  }
+
+  #navbar a.active {
+    pointer-events: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+
+  #navbar li a.active:hover {
+    background-color: #20324e;
+    transform: rotate(5deg);
   }
 
 
